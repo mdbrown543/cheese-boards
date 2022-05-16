@@ -2,7 +2,7 @@ const {Sequelize, sequelize} = require('./db');
 
 
 let Cheese = sequelize.define('cheese', {
-    title: Sequelize.STRING,
+    type: Sequelize.STRING,
     description: Sequelize.STRING,
   });
   

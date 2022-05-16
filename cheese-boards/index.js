@@ -3,13 +3,13 @@ const {Cheese} = require('./Cheese')
 const {User} = require('./User')
 
 //one-to-many relationship
-Band.hasMany(Musician)
-Musician.belongsTo(Band,{
-    foreignKey: 'bandId'
+User.hasMany(Board)
+Board.belongsTo(User,{
+    foreignKey: 'boardId'
   });
 //many-to-many relationship
-Band.belongsToMany(Song,{through: "band_songs"});
-Song.belongsToMany(Band,{through: "band_songs"});
+Board.belongsToMany(Cheese,{through: "cheese_board"});
+Cheese.belongsToMany(Board,{through: "cheese_board"});
 
 module.exports = {
     Board,
